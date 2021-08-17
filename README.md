@@ -5,6 +5,7 @@ install bash tool
 
 ## install first
 ```
+sudo apt update && sudo apt upgrade
 sudo apt install git bash-completion
 ```
 
