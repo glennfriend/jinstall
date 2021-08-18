@@ -13,20 +13,21 @@ sudo apt install git bash-completion
 ```
 #
 pwd
-INSTALL_BASE_PATH="~/tools"
+INSTALL_BASE_PATH=~/tools
 
 #
-mkdir ${INSTALL_BASE_PATH}
-cd    ${INSTALL_BASE_PATH}
+mkdir -p ${INSTALL_BASE_PATH}
+cd       ${INSTALL_BASE_PATH}
 git clone https://github.com/glennfriend/jinstall.git
-sudo ln -s ${INSTALL_BASE_PATH}/jinstall/jinstall  /bin/jinstall
+sudo ln -s ${INSTALL_BASE_PATH}/jinstall/jinstall.sh  /bin/jinstall
+
 
 #
 TARGET_FILE=~/.zshrc
-echo ""                                                             >> ${TARGET_FILE}
-echo "## jinstall"                                                  >> ${TARGET_FILE}
-echo "source ${INSTALL_BASE_PATH}/jinstall/auto-complete-list.sh"   >> ${TARGET_FILE}
-echo ""                                                             >> ${TARGET_FILE}
+echo ""                                                                 >> ${TARGET_FILE}
+echo "## jinstall"                                                      >> ${TARGET_FILE}
+echo "source ${INSTALL_BASE_PATH}/jinstall/auto-complete-jinstall.sh"   >> ${TARGET_FILE}
+echo ""                                                                 >> ${TARGET_FILE}
 tail ${TARGET_FILE}
 
 ```

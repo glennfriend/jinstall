@@ -1,7 +1,6 @@
 #!/bin/bash
 
 TOOL_PATH="$(dirname "$(readlink -f $0)")"
-SCRIPT_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
 
 # ============================================================
 #   helper
@@ -14,7 +13,7 @@ file_exists() {
 }
 
 input_yes_or_no() {
-  read -r -p "Are you Install ? [y/N] " input
+  read -r -p "Are you install ? [y/N] " input
 
   case $input in
       [yY][eE][sS]|[yY])
@@ -31,7 +30,6 @@ input_yes_or_no() {
   esac
 }
 
-
 # ============================================================
 #   check
 # ============================================================
@@ -42,8 +40,8 @@ if [ -z "$1" ]; then
   echo "[pwd]"
   pwd
   echo
-  echo "[scripts]"
-  ls ${TOOL_PATH}/script/
+  echo "[install scripts]"
+  ls "${TOOL_PATH}/jinstall/"
   exit 1;
 fi
 
@@ -59,9 +57,7 @@ if [ -z "$my_xclip" ]; then
 fi
 
 #
-echo '' | xclip -selection clipboard
-
-SCRIPT_FILE="${TOOL_PATH}/script/${1}"
+SCRIPT_FILE="${TOOL_PATH}/jinstall/${1}"
 file_exists ${SCRIPT_FILE}
 # echo '--------------------------------------------------------------------------------'
 # echo "${SCRIPT_FILE}"
