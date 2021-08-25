@@ -23,6 +23,14 @@ sudo ln -s ${INSTALL_BASE_PATH}/jinstall/jinstall.sh  /bin/jinstall
 
 
 #
+TARGET_FILE=~/.bashrc
+echo ""                                                                 >> ${TARGET_FILE}
+echo "## jinstall"                                                      >> ${TARGET_FILE}
+echo "source ${INSTALL_BASE_PATH}/jinstall/auto-complete-jinstall.sh"   >> ${TARGET_FILE}
+echo ""                                                                 >> ${TARGET_FILE}
+tail ${TARGET_FILE}
+
+#
 TARGET_FILE=~/.zshrc
 echo ""                                                                 >> ${TARGET_FILE}
 echo "## jinstall"                                                      >> ${TARGET_FILE}
