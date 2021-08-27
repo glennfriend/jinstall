@@ -1,11 +1,22 @@
 #!/bin/bash
 
+echo
 echo '# docker --version'
 docker --version
+
+echo
 echo '# docker-compose --version'
 docker-compose --version
 
-VERSION=1.29.2
-sudo curl -L https://github.com/docker/compose/releases/download/${VERSION}-rc3/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-
+#
+# remove old version
+# > sudo apt-get remove docker docker-engine docker.io containerd runc
+#
+#
+# install before
+# > sudo apt-get update
+# > sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
+#
+# see
+#   https://docs.docker.com/engine/install/ubuntu/
+#
