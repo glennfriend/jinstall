@@ -48,21 +48,27 @@ jinstall [tab]
 ```
 
 
-# 安裝新系統一開始要做的事
+# Ubuntu Desktop init
 ```
-Ubuntu desktop 製作開機 usb
+製作開機 usb
     win key 搜尋電腦中的製作開機碟 "creator"
 
-init install
+first install
     sudo apt update && sudo apt upgrade
     sudo apt install curl git git-core tmux
 
 讓遠端連入設定
-    sudo vi /etc/ssh/sshd_config
+    > ls -la /etc/ssh/
+    > SSH_CONFIG_FILE="/etc/ssh/ssh_config"
+    > cat $SSH_CONFIG_FILE | grep -iE 'Port|PermitRootLogin|AllowUsers'
+
+    > sudo vi $SSH_CONFIG_FILE
 
         Port 1234
         PermitRootLogin no
         AllowUsers your_user_name
 
-    sudo service ssh reload
+    > echo 'PermitRootLogin no' >> $SSH_CONFIG_FILE
+
+    > sudo service ssh reload
 ```
