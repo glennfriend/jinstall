@@ -55,7 +55,7 @@ jinstall [tab]
 
 first install
     sudo apt update && sudo apt upgrade
-    sudo apt install curl tmux vim ssh net-tools git git-core
+    sudo apt install curl tmux vim xclip ssh net-tools git git-core
 
 讓遠端連入設定
     ls -la /etc/ssh/
