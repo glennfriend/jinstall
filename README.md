@@ -55,20 +55,19 @@ jinstall [tab]
 
 first install
     sudo apt update && sudo apt upgrade
-    sudo apt install curl git git-core tmux
+    sudo apt install curl tmux vim ssh net-tools git git-core
 
 讓遠端連入設定
-    > ls -la /etc/ssh/
-    > SSH_CONFIG_FILE="/etc/ssh/ssh_config"
-    > cat $SSH_CONFIG_FILE | grep -iE 'Port|PermitRootLogin|AllowUsers'
+    ls -la /etc/ssh/
+    SSH_CONFIG_FILE="/etc/ssh/ssh_config"
+    cat $SSH_CONFIG_FILE | grep -iE 'Port|PermitRootLogin|AllowUsers'
 
-    > sudo vi $SSH_CONFIG_FILE
+    sudo vi $SSH_CONFIG_FILE
 
-        Port 1234
+        Port 22
         PermitRootLogin no
         AllowUsers your_user_name
 
-    > echo 'PermitRootLogin no' >> $SSH_CONFIG_FILE
-
-    > sudo service ssh reload
+    sudo service ssh reload
+    ifconfig | grep inet
 ```
