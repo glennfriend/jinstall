@@ -8,7 +8,7 @@ sudo apt install -y curl tree tmux xclip
 sudo apt install -y dstat htop net-tools
 sudo apt install -y git git-core tig
 sudo apt install -y ack-grep
-sudo apt install -y vim-gui-common vim-runtime
+sudo apt install -y vim vim-gui-common vim-runtime
 
 ## 進度顯示
 sudo apt install pv

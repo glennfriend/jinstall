@@ -24,7 +24,5 @@ echo
 echo '# config'
 echo 'vi ~/.zshrc'
 echo
-echo '    plugins=(git node npm composer github tmux zsh-autosuggestions)'
+echo '    plugins=(git node npm composer github tmux zsh-autosuggestions z)'
 echo
-
-
