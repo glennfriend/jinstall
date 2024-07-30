@@ -6,14 +6,14 @@ sudo apt update && sudo apt upgrade
 ##
 sudo apt install -y curl tree tmux xclip
 sudo apt install -y dstat htop net-tools
-sudo apt install -y git git-core tig
+sudo apt install -y git git-core git-delta tig
 sudo apt install -y ack-grep
 sudo apt install -y vim vim-gui-common vim-runtime
 
-## bat = cat
+## batcat = cat
 sudo apt install -y bat
 mkdir -p ~/.local/bin
-ln -s /usr/bin/batcat ~/.local/bin/bat
+ln -s /usr/bin/bat ~/.local/bin/bat
 
 
 ## 進度顯示

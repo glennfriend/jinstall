@@ -5,6 +5,8 @@ install bash tool
 
 ## install first
 ```
+source <( curl -sS --insecure https://raw.githubusercontent.com/glennfriend/dotfiles/master/shell/ubuntu-shell/bash.sh )
+
 sudo apt update && sudo apt upgrade
 sudo apt install git bash-completion
 ```
@@ -42,7 +44,7 @@ tail ${TARGET_FILE}
 
 ## example
 ```
-jinstall
+jinstall dev-zsh.sh
 jinstall dev-basic.sh
 jinstall [tab]
 ```
