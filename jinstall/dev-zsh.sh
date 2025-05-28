@@ -1,4 +1,6 @@
 #!/bin/bash
+trap "echo 'Stop Shell'; exit 130" INT
+
 
 echo
 echo '# check'
