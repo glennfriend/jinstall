@@ -3,10 +3,13 @@
 install bash tool
 ```
 
-## install first
+## help myself
 ```
 source <( curl -sS --insecure https://raw.githubusercontent.com/glennfriend/dotfiles/master/shell/ubuntu-shell/bash.sh )
+```
 
+## install first
+```
 sudo apt update && sudo apt upgrade
 sudo apt install git bash-completion
 ```
